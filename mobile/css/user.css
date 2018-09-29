@@ -1,54 +1,63 @@
-body{
+body {
     background: #fff;
 }
 
-.form_box{
+.form_box {
     padding: 10px;
 }
 
-.btn_login,.btn_outLogin{
+.btn_login,
+.btn_outLogin {
     width: 100%;
     margin: 20px 0;
 }
 
-[type="text"][name="code"]{
+[type="text"][name="vCode"] {
     width: 60%;
     float: left;
 }
-.mui-input-row .btn_getCode{
+
+.mui-input-row .btn_getCode {
     width: 35%;
     float: left;
     margin-left: 5%;
     height: 40px;
 }
 
-.cz_text{
+.cz_text {
     font-size: 12px;
     height: 20px;
     line-height: 20px;
 }
-.cz_text [type=checkbox]{
+
+.cz_text [type=checkbox] {
     vertical-align: middle;
 }
-.cz_text a{
+
+.cz_text a {
     float: right;
 }
-.mui-table-view{
+
+.mui-table-view {
     margin-top: 20px;
 }
-.bgg{
+
+.bgg {
     background: #efeff4;
 }
-.p20{
+
+.p20 {
     padding: 0 10px;
 }
-.delivery{
+
+.delivery {
     font-size: 14px;
 }
-.address{
+
+.address {
     font-size: 12px;
     color: #ccc;
     width: 100%;
     white-space: normal;
-    padding-right:20px;
+    padding-right: 20px;
 }
