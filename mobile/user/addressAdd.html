@@ -25,13 +25,13 @@
             <form action="">
                 <div class="form_box">
                     <div class="region">
-                        <select name="" id="p" data-id="140000">
+                        <select id="p">
                             <option value="">请选择省份</option>
                         </select>
-                        <select name="" id="c" data-id="141000">
+                        <select id="c">
                            <option value="">请选择城市</option>
                         </select>
-                        <select name="" id="d" data-id="141024">
+                        <select id="d">
                            <option value="">请选择县/区</option>
                         </select>
                     </div>
@@ -68,6 +68,15 @@
         $('form').on('submit', function() {
             //1.获取用户填写的信息
             var data = $(this).serialize();
+            var ptext = $('#p option:selected').text();
+            var ctext = $('#c option:selected').text();
+            var dtext = $('#d option:selected').text();
+
+            // console.log(ptext);
+            //将省市县拼凑然后在发送
+            data += '&address=' + ptext + ctext + dtext;
+            console.log(data);
+
             //2. 发送到服务端
             $.ajax({
                 url: '/api/address/addAddress',
